@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4f46e5 0%, #22c55e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.auth-card {
+    background: #ffffff;
+    padding: 40px 32px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* LOGO FIX FINAL - PAS BUAT LOGO HORIZONTAL TRANSPARAN LO */
+.logo-section {
+    width: 100%;
+    max-width: 420px;              /* sama kayak card, biar ga keluar */
+    margin: 0 auto 36px auto;      /* jarak bawah lega tapi ga berlebih */
+    text-align: center;
+    padding: 0 20px;               /* biar ga nempel pinggir di HP */
+}
+
+.logo-section img {
+    max-width: 80%;                /* isi 80% dari card → sekitar 300-330px, gede tapi aman */
+    height: auto;                  /* jaga proporsi, ga dipaksa tinggi */
+    object-fit: contain;
+    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.2)); /* shadow keren biar pop di gradient */
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-section img:hover {
+    transform: translateY(-4px);
+}
+
+/* Responsive - di HP agak mengecil biar ga makan tempat */
+@media (max-width: 480px) {
+    .logo-section {
+        margin-bottom: 28px;
+        padding: 0 10px;
+    }
+    
+    .logo-section img {
+        max-width: 90%;            /* lebih gede sedikit di HP karena layar kecil */
+    }
+}
+.auth-card h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1f2937;
+}
+
+.auth-card .subtitle {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 32px;
+}
+
+.input-group {
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.auth-card input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.auth-card button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    background: #4f46e5;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.auth-card button:hover {
+    background: #4338ca;
+}
+
+.error {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.alt {
+    margin-top: 24px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.alt a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.alt a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive - logo mengecil di HP */
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 32px 24px;
+    }
+    
+    .auth-card h2 {
+        font-size: 24px;
+    }
+
+    .logo-box {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 24px;
+    }
+}
